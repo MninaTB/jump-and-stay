@@ -5,7 +5,7 @@ import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Input.Keys;
 
 public class GameInput implements InputProcessor {
-
+	private Player player;
 	/*
 	if(Gdx.input.isKeyPressed(Keys.A)) {
 		position.x -= maxVelocity * delta;
@@ -23,11 +23,15 @@ public class GameInput implements InputProcessor {
 	if(Gdx.input.isKeyJustPressed(Keys.ESCAPE)) {
 		Gdx.app.exit();
 	}*/
+	public GameInput(Player p) {
+		player = p;
+	}
 	
 	@Override
 	public boolean keyDown(int keycode) {
 		switch(keycode) {
 		case Keys.SPACE:
+			player.jump();
 			System.out.println("jump");
 			break;
 		case Keys.ESCAPE:

@@ -1,30 +1,16 @@
 package com.mygdx.game;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+public class Player extends GameBlock {
+	public Player(float x1, float y1, float x2, float y2, String img) {
+		super(x1, y1, x2, y2, img);
+	}
 
-public class Player implements GameObject {
-	private SpriteBatch batch;
-	private Texture img;
-	private float x;
-	private float y;
-	
-	public Player(float x, float y) {
-		this.x = x;
-		this.y = y;
-		batch = new SpriteBatch();
-		img = new Texture("Dogs.png");
+	public void jump() {
+		this.y1 += 10;
+		this.y2 += 10;
 	}
-	
-	public void render(float delta) {
-		batch.begin();
-		batch.draw(img, x, y, 50.0f, 50.0f);
-		batch.end();
-	}
-	
-	public void dispose() {
-		batch.dispose();
-		img.dispose();
+
+	@Override
+	public void calculate(float delta) {
 	}
 }

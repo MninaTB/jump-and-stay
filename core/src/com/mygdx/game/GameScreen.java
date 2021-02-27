@@ -11,13 +11,15 @@ public class GameScreen extends ScreenAdapter {
 	
 	public GameScreen() {
 		objects = new ArrayList<GameObject>();
-		Player player1 = new Player(100.0f, 100.0f);
-		GameBlock hinderniss = new GameBlock(150.0f, 50.0f, 200.0f, 100.0f, "Dogs.png");
-		GameBlock stein = new GameBlock(0.0f, 0.0f, Gdx.graphics.getWidth(), 50.0f, "boden.png");
+		Player player1 = new Player(100.0f, 50.0f, 150.0f, 100.0f, "Dogs.png");
+		Enemy obstacle1 = new Enemy(150.0f, 50.0f, 200.0f, 100.0f, "Dogs.png");
+		Enemy obstacle2 = new Enemy(200.0f, 50.0f, 250.0f, 100.0f, "Dogs.png");
+		Ground ground = new Ground(0.0f, 0.0f, Gdx.graphics.getWidth(), 50.0f, "boden.png");
 		objects.add(player1);
-		objects.add(hinderniss);
-		objects.add(stein);
-		Gdx.input.setInputProcessor(new GameInput());
+		objects.add(obstacle1);
+		objects.add(obstacle2);
+		objects.add(ground);
+		Gdx.input.setInputProcessor(new GameInput(player1));
 	}
 	
 	@Override
