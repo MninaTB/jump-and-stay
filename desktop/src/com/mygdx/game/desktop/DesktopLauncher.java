@@ -11,7 +11,7 @@ public class DesktopLauncher {
 		config.vSyncEnabled = true;
 		config.fullscreen = false;
 		config.title = "Fox jumping and running!";
-		config.addIcon("dog.png", Files.FileType.Internal);
+		//config.addIcon("dog.png", Files.FileType.Internal);
 		new LwjglApplication(new MyGdxGame(), config);
 	}
 }
