@@ -2,9 +2,8 @@ package com.mygdx.game;
 
 import com.badlogic.gdx.Gdx;
 
-
-public class Enemy extends GameBlock {
-	public Enemy(Hitbox hitbox, String img) {
+public class Cloud extends GameBlock {
+	public Cloud(Hitbox hitbox, String img) {
 		super(hitbox, img);
 	}
 	
@@ -17,9 +16,5 @@ public class Enemy extends GameBlock {
 			hitbox.setX1(Gdx.graphics.getWidth());
 			hitbox.setX2(hitbox.getX1() + objWidth);
 		}
-	}
-	@Override
-	public void dispose() {
-		super.dispose();
 	}
 }

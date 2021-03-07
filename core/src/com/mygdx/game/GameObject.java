@@ -5,4 +5,6 @@ public interface GameObject {
 	public void render(float delta);
 
 	public void dispose();
+	
+	public Hitbox getHitbox();
 }

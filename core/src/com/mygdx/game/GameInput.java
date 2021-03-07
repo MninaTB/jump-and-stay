@@ -32,19 +32,16 @@ public class GameInput implements InputProcessor {
 		switch(keycode) {
 		case Keys.SPACE:
 			player.jump();
-			System.out.println("jump");
 			break;
 		case Keys.ESCAPE:
 			Gdx.app.exit();
 			break;
 		}
-		System.out.println("down");
 		return false;
 	}
 
 	@Override
 	public boolean keyUp(int keycode) {
-		System.out.println("up");
 		return false;
 	}
 

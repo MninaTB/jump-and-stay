@@ -1,7 +1,8 @@
 package com.mygdx.game;
 
-public class Ground extends GameBlock {
-	public Ground(Hitbox hitbox, String img) {
+public class DecoBlock extends GameBlock {
+	
+	public DecoBlock(Hitbox hitbox, String img) {
 		super(hitbox, img);
 	}
 

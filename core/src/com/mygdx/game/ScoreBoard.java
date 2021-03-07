@@ -32,4 +32,14 @@ public class ScoreBoard implements GameObject{
 		font.dispose();
 		display.dispose();
 	}
+
+	@Override
+	public Hitbox getHitbox() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public int getScore() {
+		return (int)score;
+	}
 }
