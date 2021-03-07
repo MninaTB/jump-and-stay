@@ -10,8 +10,8 @@ public class DesktopLauncher {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 		config.vSyncEnabled = true;
 		config.fullscreen = false;
-		config.title = "Dogs jumping and running!";
-		config.addIcon("badlogic.jpg", Files.FileType.Internal);
+		config.title = "Fox jumping and running!";
+		config.addIcon("dog.png", Files.FileType.Internal);
 		new LwjglApplication(new MyGdxGame(), config);
 	}
 }
